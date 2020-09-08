@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import instance from "../../axios";
+import "../../sass/components/row.scss";
 
 import RowItem from "../row-item/row-item.component";
 
-const imageBaseUrl = "https://image.tmdb.org/t/p/original";
+const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 
-function Row({ getUrl }) {
+function Row({ getUrl, title }) {
   const [shows, setShows] = useState([]);
 
   //Gets and updates shows object corresponding to getUrl
@@ -16,12 +17,11 @@ function Row({ getUrl }) {
     }
     getData();
   }, [getUrl]);
-  console.log(shows);
+  //Creates a row item for each show in the shows array
   return (
     <div className="row">
-      This is a row
-      <div className="row__slider">
-        This is where images go
+      <h2 className="row__title"> {title}</h2>
+      <div className="row__slidebar">
         {shows.map((value) => (
           <RowItem
             key={value.id}

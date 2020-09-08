@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Header from "./components/header/header.component.jsx";
+import Banner from "./components/banner/banner.component.jsx";
 import Row from "./components/row/row.component.jsx";
 
 import requests from "./requests.js";
@@ -9,8 +9,10 @@ import requests from "./requests.js";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Row getUrl={requests.getTrending} />
+      <Banner />
+      <Row getUrl={requests.getTrending} title={"Trending"} />
+      <Row getUrl={requests.getDescendingPopularity} title={"Popular"} />
+      <Row getUrl={requests.getFantasy} title={"Fantasy"} />
     </div>
   );
 }

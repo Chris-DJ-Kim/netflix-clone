@@ -1,0 +1,19 @@
+.row {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .row__title {
+        margin: 30px 0 0 0;
+        left: 10px;
+        width: 10%;
+    }
+
+    .row__slidebar {
+        display: flex;
+
+    }
+}
