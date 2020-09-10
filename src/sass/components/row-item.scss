@@ -1,9 +1,10 @@
 .row__item {
   margin: 45px 5px 55px 5px;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.5);
-    transition-duration: 2s
+    transition-duration: 1.5s
   }
 
   img {

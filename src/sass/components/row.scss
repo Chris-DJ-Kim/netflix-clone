@@ -1,13 +1,14 @@
 .row {
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-left: 3rem;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
     .row__title {
-        margin: 30px 0 0 0;
+        margin-left: 2rem;
         left: 10px;
         width: 10%;
     }

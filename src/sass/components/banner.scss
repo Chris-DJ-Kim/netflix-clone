@@ -1,4 +1,22 @@
 .banner {
+    height: 800px;
+    margin-bottom: 60px;
 
-    height: 500px;
+    .contents {
+        margin-left: 50px;
+        padding-top: 400px;
+        height: 400px;
+        text-shadow: 1px 1px #000;
+
+        .contents__title {
+            font-size: 4rem;
+            font-weight: 600;
+            padding-bottom: 1rem;
+        }
+
+        .contents__description {
+            margin-top: 1rem;
+            max-width: 400px;
+        }
+    }
 }

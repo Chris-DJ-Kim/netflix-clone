@@ -4,7 +4,7 @@ import "../../sass/components/row.scss";
 
 import RowItem from "../row-item/row-item.component";
 
-const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+const imageBaseUrl = "https://image.tmdb.org/t/p/w300";
 
 function Row({ getUrl, title }) {
   const [shows, setShows] = useState([]);
@@ -17,6 +17,7 @@ function Row({ getUrl, title }) {
     }
     getData();
   }, [getUrl]);
+  console.log(shows);
   //Creates a row item for each show in the shows array
   return (
     <div className="row">
