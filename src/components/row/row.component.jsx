@@ -22,13 +22,19 @@ function Row({ getUrl, title }) {
     <div className="row">
       <h2 className="row__title"> {title}</h2>
       <div className="row__slidebar">
-        {shows.map((value) => (
-          <RowItem
-            key={value.id}
-            showData={value}
-            imageUrl={`${imageBaseUrl}${value.poster_path}`}
-          />
-        ))}
+        {
+          //Creates poster for each show
+          shows.map((value) =>
+            //Only creates poster if there is a valid poster url
+            value.poster_path ? (
+              <RowItem
+                key={value.id}
+                showData={value}
+                imageUrl={`${imageBaseUrl}${value.poster_path}`}
+              />
+            ) : null
+          )
+        }
       </div>
     </div>
   );

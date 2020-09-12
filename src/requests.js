@@ -6,6 +6,7 @@ const requests = {
   getFantasy: `/discover/movie?api_key=${API_KEY}&language=en-US&include_adult=false&with_genres=14`,
   getFamily: `/discover/movie?api_key=${API_KEY}&language=en-US&include_adult=false&with_genres=10751`,
   getDocumentary: `/discover/movie?api_key=${API_KEY}&language=en-US&include_adult=false&with_genres=99`,
+  getHistory: `/discover/movie?api_key=${API_KEY}&language=en-US&include_adult=false&with_genres=36`,
 };
 
 export default requests;

@@ -5,9 +5,15 @@ import { API_KEY } from "../../requests.js";
 
 import "../../sass/components/video-player.scss";
 
-function VideoPlayer({ showId, videoOptions }) {
+function VideoPlayer({ showId, toggleTrailer }) {
   const [videoKey, setVideoKey] = useState();
   const [sorryMessage, setSorryMessage] = useState("");
+
+  const videoOptions = {
+    height: "100%",
+    width: "100%",
+  };
+
   //Retrieves youtube video key from tmdb
   useEffect(() => {
     async function getData() {
@@ -28,14 +34,19 @@ function VideoPlayer({ showId, videoOptions }) {
     }
     getData();
   });
+
   return (
     <div className="video-player">
       {
         //If videoKey is undefined
         videoKey ? (
-          <Youtube videoId={videoKey} opts={videoOptions} />
+          <Youtube
+            videoId={videoKey}
+            opts={videoOptions}
+            onEnd={toggleTrailer}
+          />
         ) : (
-          <span>{sorryMessage}</span>
+          <h2 className="sorry-message">{sorryMessage}</h2>
         )
       }
     </div>

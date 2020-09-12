@@ -1,3 +1,29 @@
 .video-player {
     position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+
+
+
+
+    //Youtube player creates a div around itself
+
+    div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .sorry-message {
+        background-color: rgba(38, 38, 38, 0.7);
+        text-align: center;
+        width: 20%;
+        margin: 20% auto;
+        padding: 30px;
+        border-radius: 1rem;
+    }
 }

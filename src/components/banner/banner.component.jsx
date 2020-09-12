@@ -26,7 +26,7 @@ function Banner() {
   }, []);
   //Used to display one or the other in case 'title' is not provided
   const { title, name, overview } = bannerShow;
-  function startTrailer() {
+  function toggleTrailer() {
     setWatchingTrailer(!watchingTrailer);
   }
   return (
@@ -38,10 +38,12 @@ function Banner() {
         backgroundPosition: "center top",
       }}
     >
-      {watchingTrailer ? <VideoPlayer showId={bannerShow.id} /> : null}
+      {watchingTrailer ? (
+        <VideoPlayer showId={bannerShow.id} toggleTrailer={toggleTrailer} />
+      ) : null}
       <div className="contents">
         <div className="contents__title">{title ? title : name}</div>
-        <CustomButton onClick={() => startTrailer()}>
+        <CustomButton onClick={() => toggleTrailer()}>
           Watch Trailer
         </CustomButton>
         <CustomButton>Add to List</CustomButton>

@@ -1,4 +1,5 @@
 .banner {
+    position: relative;
     height: 800px;
     margin-bottom: 60px;
 
@@ -7,6 +8,7 @@
         padding-top: 400px;
         height: 400px;
         text-shadow: 1px 1px #000;
+
 
         .contents__title {
             font-size: 4rem;
