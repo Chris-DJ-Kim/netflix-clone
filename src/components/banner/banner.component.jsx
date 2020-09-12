@@ -3,15 +3,15 @@ import instance from "../../axios.js";
 import requests from "../../requests.js";
 
 import CustomButton from "../custom-button/custom-button.component";
+import VideoPlayer from "../video-player/video-player.component";
 
 import "../../sass/components/banner.scss";
 
 const imageBaseUrl = "https://image.tmdb.org/t/p/original";
-const videoBaseUrl = "https://www.youtube.com/watch?v=";
 
 function Banner() {
   const [bannerShow, setBannerShow] = useState([]);
-
+  const [watchingTrailer, setWatchingTrailer] = useState(false);
   useEffect(() => {
     async function getData() {
       const request = await instance.get(requests.getTrending);
@@ -26,7 +26,9 @@ function Banner() {
   }, []);
   //Used to display one or the other in case 'title' is not provided
   const { title, name, overview } = bannerShow;
-  console.log(bannerShow);
+  function startTrailer() {
+    setWatchingTrailer(!watchingTrailer);
+  }
   return (
     <div
       className="banner"
@@ -36,9 +38,12 @@ function Banner() {
         backgroundPosition: "center top",
       }}
     >
+      {watchingTrailer ? <VideoPlayer showId={bannerShow.id} /> : null}
       <div className="contents">
         <div className="contents__title">{title ? title : name}</div>
-        <CustomButton>Watch Trailer</CustomButton>
+        <CustomButton onClick={() => startTrailer()}>
+          Watch Trailer
+        </CustomButton>
         <CustomButton>Add to List</CustomButton>
         <div className="contents__description">{overview}</div>
       </div>

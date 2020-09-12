@@ -10,9 +10,11 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Row getUrl={requests.getTrending} title={"Trending"} />
-      <Row getUrl={requests.getDescendingPopularity} title={"Popular"} />
-      <Row getUrl={requests.getFantasy} title={"Fantasy"} />
+      <Row getUrl={requests.getTrending} title="Trending" />
+      <Row getUrl={requests.getDescendingPopularity} title="Popular" />
+      <Row getUrl={requests.getFantasy} title="Fantasy" />
+      <Row getUrl={requests.getDocumentary} title="Documentary" />
+      <Row getUrl={requests.getFamily} title="Family" />
     </div>
   );
 }

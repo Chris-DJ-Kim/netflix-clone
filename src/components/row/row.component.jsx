@@ -17,7 +17,6 @@ function Row({ getUrl, title }) {
     }
     getData();
   }, [getUrl]);
-  console.log(shows);
   //Creates a row item for each show in the shows array
   return (
     <div className="row">
