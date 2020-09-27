@@ -4,7 +4,7 @@
 -Ability to watch trailers.
 
 **DEMO**
-![Recordit GIF](http://g.recordit.co/4AxdfvPekA.gif)
+![](http://g.recordit.co/4AxdfvPekA.gif)
 
 # Planned Features
 -Show user ratings/Rate Movie function.
