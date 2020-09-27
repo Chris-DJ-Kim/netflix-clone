@@ -1,6 +1,7 @@
 # Netflix-Clone
 
--Movie database webapp with netflix-like aesthetics
--Ability to watch trailers
+-Movie database webapp with netflix-like aesthetics.
+-Ability to watch trailers.
 
-https://recordit.co/4AxdfvPekA
+**DEMO**
+![Recordit GIF](https://recordit.co/4AxdfvPekA)
