@@ -1,11 +1,11 @@
 # Netflix-Clone
 
--Movie database webapp with netflix-like aesthetics.
--Ability to watch trailers.
+-Movie database webapp with netflix-like aesthetics.<br/>
+-Ability to watch trailers.<br/>
 
 **DEMO**
-![](http://g.recordit.co/4AxdfvPekA.gif)
+![Recordit GIF](https://i.ibb.co/PjSLcmr/ezgif-com-resize.gif)
 
 # Planned Features
--Show user ratings/Rate Movie function.
--Backend with ability to store user preferences in a "My List"
+-Show user ratings/Rate Movie function.<br/>
+-Backend with ability to store user preferences in a "My List". <br/>
