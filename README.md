@@ -8,7 +8,7 @@
 
 # How to use
 
--run npm install
+- run npm install
 - enjoy!
 
 # Planned Features
